@@ -1,0 +1,48 @@
+
+<div class="page">
+  <h2>Pending Questions</h2>
+  <mat-card *ngFor="let q of questions" class="q-card">
+    <mat-card-title>{{ q.title }}</mat-card-title>
+    <mat-card-content>{{ q.text | slice: 0:150 }}</mat-card-content>
+    <mat-card-actions>
+      <button
+        mat-raised-button
+        [ngClass]="{ approved: q.status === 'approved' }"
+        (click)="markApproved(q, 'q')"
+      >
+        Approve
+      </button>
+
+      <button
+        mat-raised-button
+        [ngClass]="{ rejected: q.status === 'rejected' }"
+        (click)="markRejected(q, 'q')"
+      >
+        Reject
+      </button>
+    </mat-card-actions>
+  </mat-card>
+
+  <h2 style="margin-top: 2rem;">Pending Answers</h2>
+  <mat-card *ngFor="let a of answers" class="q-card">
+    <mat-card-title>Answer to: {{ a.questionTitle }}</mat-card-title>
+    <mat-card-content>{{ a.text | slice: 0:150 }}</mat-card-content>
+    <mat-card-actions>
+      <button
+        mat-raised-button
+        [ngClass]="{ approved: a.status === 'approved' }"
+        (click)="markApproved(a, 'a')"
+      >
+        Approve
+      </button>
+
+      <button
+        mat-raised-button
+        [ngClass]="{ rejected: a.status === 'rejected' }"
+        (click)="markRejected(a, 'a')"
+      >
+        Reject
+      </button>
+    </mat-card-actions>
+  </mat-card>
+</div>

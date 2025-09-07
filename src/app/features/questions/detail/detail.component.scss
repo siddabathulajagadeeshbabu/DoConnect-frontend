@@ -1,0 +1,52 @@
+.page {
+  max-width: 800px;
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+mat-card {
+  padding: 16px;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+h2 {
+  margin: 0 0 12px;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+h3 {
+  margin: 0 0 12px;
+  font-size: 18px;
+  font-weight: 500;
+  color: #444;
+}
+
+.imgs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 12px 0;
+}
+
+.imgs img {
+  max-width: 200px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+.answer {
+  padding: 12px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.answer:last-child {
+  border-bottom: none;
+}
+
+.full {
+  width: 100%;
+}

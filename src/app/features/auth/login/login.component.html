@@ -1,0 +1,32 @@
+<div class="center">
+ <div class="auth-card">
+    <h2>Sign In</h2>
+
+    Login form
+    <form (ngSubmit)="onLogin()" #loginForm="ngForm">
+      <mat-form-field appearance="fill" class="full">
+        <mat-label>Email</mat-label>
+        <input matInput type="email" name="email" [(ngModel)]="email" required>
+      </mat-form-field> 
+      <mat-form-field appearance="outline" class="full">
+  <mat-label>Password</mat-label>
+  <input matInput [type]="hide ? 'password' : 'text'" formControlName="password" />
+  <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+    <mat-icon>{{ hide ? 'visibility_off' : 'visibility' }}</mat-icon>
+  </button>
+   </mat-form-field>
+      Sign In button
+      <button mat-flat-button color="primary" type="submit" [disabled]="!loginForm.valid">
+        Sign In
+      </button>
+
+      Sign Up button (navigates to register page)
+      <button mat-button type="button" (click)="goToSignUp()">
+        Don’t have an account? Sign Up
+      </button>
+    </form>
+  </div>
+</div>
+
+
+  

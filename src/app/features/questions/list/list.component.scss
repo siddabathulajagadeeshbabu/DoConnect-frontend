@@ -1,0 +1,21 @@
+.questions-list {
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 15px;
+
+  mat-card {
+    margin-bottom: 15px;
+  }
+
+  .question-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #1976d2;
+  }
+
+  .question-meta {
+    font-size: 0.9rem;
+    color: #777;
+    margin-top: 5px;
+  }
+}

@@ -1,0 +1,16 @@
+<!-- <p>register works!</p> -->
+<mat-form-field appearance="outline" class="full">
+  <mat-label>Password</mat-label>
+  <input matInput [type]="hide ? 'password' : 'text'" formControlName="password" />
+  <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+    <mat-icon>{{ hide ? 'visibility_off' : 'visibility' }}</mat-icon>
+  </button>
+</mat-form-field>
+
+<mat-form-field appearance="outline" class="full">
+  <mat-label>Confirm Password</mat-label>
+  <input matInput [type]="hideConfirm ? 'password' : 'text'" formControlName="confirmPassword" />
+  <button mat-icon-button matSuffix (click)="hideConfirm = !hideConfirm" [attr.aria-label]="'Hide confirm password'" [attr.aria-pressed]="hideConfirm">
+    <mat-icon>{{ hideConfirm ? 'visibility_off' : 'visibility' }}</mat-icon>
+  </button>
+</mat-form-field>

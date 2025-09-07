@@ -1,0 +1,110 @@
+/* Styles for the main navigation bar */
+.navbar {
+  background-color: #1a1a1a; /* Dark background to match the body */
+  color: #fff; /* White text for all elements in the navbar */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+  height: 64px;
+  
+}
+
+/* Styles for the centered logo */
+.logo {
+  color: #fff; /* Ensures the logo text is visible on the dark background */
+  text-shadow: none; /* Remove previous shadow for a cleaner look */
+  font-size: 1.6rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+body {
+  margin: 0;
+  background-color: grey; /* black background */
+  background-image: url("assets/images/doconnect-logo.png");
+  background-repeat: no-repeat;
+  background-position: center center; /* center of page */
+  background-size: 200px auto; /* adjust logo size */
+  height: 200vh; /* full viewport height */
+}
+
+
+/* Styles for the spacer element to create space */
+.spacer {
+  flex: 1;
+}
+
+/* General styles for all mat-button elements inside the navbar */
+.navbar .mat-button {
+  color: #ccc; /* A light gray for button text */
+  font-weight: 500;
+  font-size: 1rem;
+  padding: 0 16px;
+  transition: color 0.3s ease;
+}
+
+.navbar .mat-button:hover {
+  color: #fff; /* White text on hover for a subtle highlight */
+  background-color: rgba(255, 255, 255, 0.1); /* Slightly visible background on hover */
+}
+
+/* Specific styles for the Login/Register buttons */
+.navbar .mat-button[routerlink="/auth/login"],
+.navbar .mat-button[routerlink="/auth/register"] {
+  color: #999;
+}
+
+.navbar .mat-button[routerlink="/auth/login"]:hover,
+.navbar .mat-button[routerlink="/auth/register"]:hover {
+  color: #fff;
+}
+
+/* Style for the Logout button to make it stand out */
+.navbar .mat-button:last-child {
+  color: #ff5252; /* A reddish color for a "danger" or clear action button */
+  border: 1px solid #ff5252;
+  border-radius: 4px;
+  margin-left: 8px;
+  padding: 8px 16px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.navbar .mat-button:last-child:hover {
+  background-color: #ff5252;
+  color: #fff;
+}
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow-x: hidden; /* No horizontal scroll */
+  overflow-y: auto;   /* Allow vertical scroll */
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem; /* space between input and button */
+  margin-bottom: 1.5rem;
+
+  input {
+    flex: 1; /* take up all available width */
+    padding: 0.6rem 1rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+  }
+
+  button {
+    white-space: nowrap; 
+    color: red;/* keep button fixed size */
+  }
+}
+
+/* === Search Bar Styles === */
+.search-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  max-width: 1000px;   /* wider search bar */
+  margin: 0 auto 1.5rem auto; /* center with bottom spacing */
+}
+

@@ -1,0 +1,113 @@
+.page {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+
+  h2 {
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin: 2rem 0 1rem;
+    color: #8a0b0b; // brand red
+  }
+}
+
+/* Question/Answer cards */
+.q-card {
+  margin-bottom: 1.2rem;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+  }
+
+  mat-card-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 0.4rem;
+  }
+
+  mat-card-content {
+    font-size: 0.95rem;
+    color: #444;
+  }
+
+  mat-card-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.75rem;
+    padding: 0.75rem 1rem 1rem;
+
+    button {
+      font-weight: 600;
+      border-radius: 8px;
+      padding: 0.5rem 1.2rem;
+      text-transform: none;
+      font-size: 0.9rem;
+      transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.3s;
+
+      &:hover {
+        transform: translateY(-1px);
+      }
+    }
+
+    /* Default States */
+    button:first-child {
+      background: #e0f2f1;
+      color: #2e7d32;
+    }
+
+    button:last-child {
+      background: #ffebee;
+      color: #c62828;
+    }
+
+    /* Active States */
+    .approved {
+      background: #2e7d32 !important;
+      color: #fff !important;
+
+      &:hover {
+        background: #1b5e20 !important;
+        box-shadow: 0 4px 10px rgba(46, 125, 50, 0.3);
+      }
+    }
+
+    .rejected {
+      background: #c62828 !important;
+      color: #fff !important;
+
+      &:hover {
+        background: #b71c1c !important;
+        box-shadow: 0 4px 10px rgba(198, 40, 40, 0.3);
+      }
+    }
+  }
+}
+
+/* Empty state */
+.empty-state {
+  text-align: center;
+  color: #777;
+  margin-top: 2rem;
+  font-style: italic;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .page {
+    padding: 0 0.5rem;
+  }
+
+  .q-card {
+    mat-card-title {
+      font-size: 1rem;
+    }
+
+    mat-card-content {
+      font-size: 0.85rem;
+    }
+  }
+}

@@ -1,0 +1,82 @@
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+
+  /* Background image for register */
+  background: url('../../../../assets/images/login.image.jpg') no-repeat center center/cover;
+}
+
+.auth-card {
+  width: 480px; /* a bit wider for register */
+  padding: 2rem;
+  border-radius: 12px;
+  background: #fff; /* White container */
+  color: #000; /* Dark text */
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6);
+  animation: fadeIn 0.6s ease-in-out;
+
+  h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+    color: #8a0b0b; /* Brand Red */
+  }
+}
+
+mat-form-field.full {
+  width: 100%;
+  margin-bottom: 1rem;
+
+  ::ng-deep .mat-mdc-text-field-wrapper {
+    background: #f5f5f5; /* Light gray input background */
+    border-radius: 6px;
+  }
+
+  ::ng-deep input {
+    color: #000; /* Black text inside input */
+  }
+
+  ::ng-deep .mat-mdc-form-field-label {
+    color: #555 !important; /* Darker label */
+  }
+}
+
+/* 🔴 Primary Register Button in Red */
+button[mat-flat-button] {
+  width: 100%;
+  margin-top: 1rem;
+  background: linear-gradient(45deg, #8a0b0b, #6e0909); /* Brand red gradient */
+  color: #fff !important;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  border-radius: 6px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+  &:hover {
+    background: #6e0909; /* Darker red on hover */
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(138, 11, 11, 0.5);
+  }
+}
+
+/* Back to Login Button */
+button[mat-button] {
+  width: 100%;
+  margin-top: 0.8rem;
+  color: #8a0b0b;
+  font-size: 0.9rem;
+  text-transform: none;
+
+  &:hover {
+    text-decoration: underline;
+    color: #6e0909;
+  }
+}
+
+/* Smooth fade-in animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}

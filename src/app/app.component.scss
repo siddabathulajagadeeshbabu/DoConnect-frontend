@@ -1,0 +1,70 @@
+/* Navbar styling */
+.navbar {
+  background-color: #1976d2; /* Primary color */
+  color: white;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  height: 70px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Logo styling with emoji */
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 8px; /* Space between emoji and text */
+  color: #fff;
+}
+
+/* Spacer to center logo/title */
+.spacer {
+  flex: 1;
+}
+
+/* Buttons styling */
+.mat-button {
+  color: white;
+  font-weight: 500;
+  border-radius: 8px;
+  margin-left: 10px;
+  padding: 6px 16px;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+/* Button hover effect */
+.mat-button:hover {
+  background-color: #004ba0; /* Darker shade */
+  transform: scale(1.05);
+}
+
+/* Guest buttons spacing */
+ng-template button {
+  display: block;
+  margin: 8px 0;
+}
+
+/* Main container styling */
+.container {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Increase search box width */
+.search-box {
+  width: 400px;   /* Adjust size as needed */
+  max-width: 100%;
+}
+
+.search-box input {
+  padding: 0.6rem 1rem;
+  font-size: 1rem;
+  background-color: #fff;
+}
+

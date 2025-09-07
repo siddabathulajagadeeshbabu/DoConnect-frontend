@@ -1,0 +1,109 @@
+/* Fullscreen Center Layout */
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+
+  /*  Solid background color */
+  background-color: #f5f5f5;
+
+  /* If you want an image, uncomment below */
+  background-image: url('../../../../assets/images/login.image.jpg'); /* place image in src/assets/images */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  padding: 1rem;
+}
+
+/* Card */
+.auth-card {
+  width: 100%;
+  max-width: 420px;
+  padding: 2rem;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.9); /* semi-transparent over image */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+/* Title */
+.auth-card h2 {
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+  font-size: 1.8rem;
+  color: #8a0b0b; /* brand red */
+}
+
+/* Form fields */
+.full {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+mat-form-field {
+  width: 100%;
+}
+
+mat-label {
+  font-weight: 500;
+  color: #444;
+}
+
+input {
+  color: #000;
+}
+
+/* Primary Login Button */
+button[mat-flat-button] {
+  width: 100%;
+  margin-top: 0.75rem;
+  padding: 0.8rem;
+  font-weight: 600;
+  font-size: 1rem;
+  border-radius: 8px;
+  background: #8a0b0b; /* brand red */
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(138, 11, 11, 0.3);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+button[mat-flat-button]:hover {
+  background: #6e0909;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(138, 11, 11, 0.4);
+}
+
+/* Secondary Register Button */
+button[mat-button] {
+  margin-top: 0.75rem;
+  width: 100%;
+  font-weight: 500;
+  color: #8a0b0b;
+  text-transform: none;
+  transition: color 0.2s ease;
+}
+
+button[mat-button]:hover {
+  color: #6e0909;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive */
+@media (max-width: 500px) {
+  .auth-card {
+    padding: 1.5rem;
+  }
+
+  .auth-card h2 {
+    font-size: 1.5rem;
+  }
+}
+

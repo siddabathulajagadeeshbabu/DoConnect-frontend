@@ -1,0 +1,21 @@
+<mat-toolbar class="navbar">
+  <div class="logo">🚀 DOConnect</div>
+  <span class="spacer"></span>
+
+  <button mat-button routerLink="/questions" routerLinkActive="active">Questions</button>
+  <button mat-button routerLink="/questions/ask" routerLinkActive="active">Ask</button>
+
+  <!--  This only shows for admins -->
+  <button *ngIf="auth.isAdmin()" mat-button routerLink="/admin" routerLinkActive="active">
+    Admin
+  </button>
+
+  <button mat-button routerLink="/about" routerLinkActive="active">About</button>
+
+  <button *ngIf="!auth.isLoggedIn()" mat-button routerLink="/auth/login">Login</button>
+  <button *ngIf="auth.isLoggedIn()" mat-button (click)="logout()">Logout</button>
+</mat-toolbar>
+
+<main class="page-content">
+  <router-outlet></router-outlet>
+</main>
